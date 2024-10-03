@@ -37,13 +37,13 @@ The 'first quantisation' principle cannot be used to satisfactorily explain cond
     \item Properties of operators are now encoded in a single set of commutation/anti-commutation relations rather than in some explicit Hilbert space representation. 
 \end{itemize}
 
-In essence, second quantisation formalism offers us significant computational advantage and a more compact and efficient representation of the Hamiltonian when dealing with many-particle quantum systems. For example, consider a \textit{symmetrised} $N$-particle wwavefunction of fermions ($\zeta = -1$) or bosons ($\zeta = +1$) expressed in the form 
+In essence, second quantisation formalism offers us a significant computational advantage and a more compact and efficient representation of the Hamiltonian when dealing with many-particle quantum systems. For example, consider a \textit{symmetrised} $N$-particle wavefunction of fermions ($\zeta = -1$) or bosons ($\zeta = +1$) expressed in the form 
 
 \begin{equation}
-	\ket{\lambda_{1}, \lambda_{2},\ldots \lambda_{N}} = \frac{1}{\sqrt{N! \prod_{\lambda=0}^{\infty}n_{\lambda}!}} \sum_{\mathcal{P}}\zeta^{\mathcal{P}} \ket{\psi_{\lambda_{\mathcal{P}1}}} \otimes \ket{\psi_{\lambda_{\mathcal{P}2}}} \ldots \otimes \ket{\psi_{\lambda_{\mathcal{P}N}}}
+    \ket{\lambda_{1}, \lambda_{2},\ldots \lambda_{N}} = \frac{1}{\sqrt{N! \prod_{\lambda=0}^{\infty}n_{\lambda}!}} \sum_{\mathcal{P}}\zeta^{\mathcal{P}} \ket{\psi_{\lambda_{\mathcal{P}1}}} \otimes \ket{\psi_{\lambda_{\mathcal{P}2}}} \ldots \otimes \ket{\psi_{\lambda_{\mathcal{P}N}}}
 \end{equation}
 
-where $n_{\lambda}$ is the total number of particles in state $\lambda$ (for fermions, Pauli exclusion principle dictates that $n_{\lambda} = 0,1$, i.e. $n_{\lambda}! = 1$). The summation runs over all $N!$ permutations of the quantum numbers $\lambda_{i}$, and $\mathcal{P}$ denotes the parity. \\ \footnote{Parity is defined as the number of transpositions of two elements which brings the permutation ($\mathcal{P}_1, \mathcal{P}_2,\ldots \mathcal{P}_{N}$)) back to the ordered sequaence (1,2,\ldots N)}
+where $n_{\lambda}$ is the total number of particles in state $\lambda$ (for fermions, Pauli exclusion principle dictates that $n_{\lambda} = 0,1$, i.e. $n_{\lambda}! = 1$). The summation runs over all $N!$ permutations of the quantum numbers $\lambda_{i}$, and $\mathcal{P}$ denotes the parity. \\ \footnote{Parity is defined as the number of transpositions of two elements which brings the permutation ($\mathcal{P}_1, \mathcal{P}_2,\ldots \mathcal{P}_{N}$)) back to the ordered sequence (1,2,\ldots N)}
 
 Second quantisation formalism provides for a much more condensed and intuitive representation for the generalised wavefunction via the \textbf{vacuum state} $\ket{\Omega}$, and a set of creation (annihilation) \textbf{field operators} $c_{\lambda}$ ($c_{\lambda}^{\dagger}$), as follows:
 
@@ -52,7 +52,7 @@ Second quantisation formalism provides for a much more condensed and intuitive r
     c_{\lambda} \ket{\Omega} = 0, \quad \frac{1}{\sqrt{\prod_{\lambda}n_{\lambda}!}} c_{\lambda_N}^{\dagger} \ldots c_{\lambda_1}^{\dagger} \ket{\Omega} = \ket{\lambda_{1}, \lambda_{2},\ldots \lambda_{N}}
 \end{equation}
 
-In terms of physical interpretation, the operator $c_{\lambda}^{\dagger}$ creates a particle in state $\lambda$ while the operator $c_{\lambda}$ annihilates it. The commutation relations between these operators are captured via Clifford algebra \footnote{$[\hat{A},\hat{B}]_{-\zeta} = \hat{A}\hat{B}-\zeta \hat{B}\hat{A}$ is the commutator $\zeta = 1$ (anticommutator $\zeta = -1$) for bosons (fermions). As per convention, the notation [.,.] denotes the commutator while \{.,.\} the anticommutator.}:
+In terms of physical interpretation, the operator $c_{\lambda}^{\dagger}$ creates a particle in state $\lambda$ while the operator $c_{\lambda}$ annihilates it. The commutation relations between these operators are captured via Clifford algebra \footnote{$[\hat{A},\hat{B}]_{\zeta} = \hat{A}\hat{B}-\zeta \hat{B}\hat{A}$ is the commutator $\zeta = 1$ (anticommutator $\zeta = -1$) for bosons (fermions). As per convention, the notation [.,.] denotes the commutator while \{.,.\} the anticommutator.}:
 
 \begin{equation}
     [c_{\lambda},c_{\mu}^{\dagger}]_{-\zeta} = \delta_{\lambda,\mu}, \quad [c_{\lambda},c_{\mu}]_{-\zeta} = [c_{\lambda}^{\dagger},c_{\mu}^{\dagger}]_{-\zeta} = 0
@@ -69,12 +69,12 @@ Before proceeding further, we need to determine the basis transformation for the
 The identity operator, $\mathcal{I}$ can be resolved as $\mathcal{I} = \sum_{\lambda=0}^{\infty}\ket{\lambda}\bra{\lambda}$. Using the relations $\ket{\tilde{\lambda}} = \sum_{\lambda}\ket{\lambda}\braket{\lambda|\tilde{\lambda}}$, $\ket{\lambda} = a_{\lambda}^{\dagger}\ket{\Omega}$, and $\ket{\tilde{\lambda}} = a_{\tilde{\lambda}}^{\dagger} \ket{\Omega}$, the transformation law is given by:
 
 \begin{equation}
-    a_{\tilde{\lambda}}^{\dagger} = \sum_{\lambda}\braket{\lambda|\tilde{\lambda}}a_{\lambda}^{\dagger}, \quad a_{\tilde{\lambda}} = \sum_{\lambda}\braket{\tilde{\lambda}|\lambda}a_{\lambda}
+    c_{\tilde{\lambda}}^{\dagger} = \sum_{\lambda} \langle \lambda|\tilde{\lambda} \rangle c_{\lambda}^{\dagger}, \quad c_{\tilde{\lambda}} = \sum_{\lambda} \langle \tilde{\lambda}|\lambda \rangle c_{\lambda}
 \end{equation}
 
 \subsection{Fourier transform of field operators}
 
-The physical interpretation provided for the creation (annihilation) operators states that they can be thought of as creating (annihilating) a particle in a state $\lambda$. In particular, this can be thought of as creating (annihilating) a particle at a dimensional site $r$, or equivalently, with a momentum $k$. This distinction is important since it is subtly related to the Heisenberg Uncertainty Principle -- the first scenario implies that the position of the particle is known with a very high certainty, and therefore is delocalised in momentum space and vice-versa. The transformation from real space to $k$-space is captured via Fourier transform of the field operators.
+The physical interpretation provided for the creation (annihilation) operators states that they can be thought of as creating (annihilating) a particle in a state $\lambda$. In particular, this can be thought of as creating (annihilating) a particle at a dimensional site $r$, or equivalently, with a momentum $k$. This distinction is important since it is subtly related to the Heisenberg Uncertainty Principle -- the first scenario implies that the position of the particle is known with a very high certainty, and therefore is delocalised in momentum space and vice-versa. The transformation from real space to $k$-space and vice-versa is captured via Fourier transform of the field operators.
 
 \begin{equation}
     \hat{c}_{r}^{(\dagger)} = \frac{1}{\sqrt{N}}\sum_{k}e^{-(+)ikr} \hat{c}_{k}^{(\dagger)}, \quad \hat{c}_{k}^{(\dagger)} = \frac{1}{\sqrt{N}}\int_{r}e^{-(+)ikr} \hat{c}_{r}^{(\dagger)}
@@ -90,3 +90,49 @@ and $k$ lies inside the first Brillouin zone, i.e. $k \in \left[-\frac{\pi}{a},\
 
 \section{Representation of operators}
 
+Single particle or one-body operators $\hat{\mathcal{O}_{1}}$ acting in a $N$-particle Hilbert space, $\mathcal{F}^{N}$, generally take the form $\hat{\mathcal{O}_{1}} = \sum_{n = 1}^{N}\hat{o}_{n}$, where $\hat{o}_{n}$ is an ordinary single-particle operator acting on the $n$-th particle. A typical example is the kinetic energy operator $\hat{T} = \sum_{n}\frac{\hat{p}_{n}^{2}}{2m}$, where $\hat{p}_{n}$ is the momentum operator acting on the $n$-th particle. Since we have seen that, by applying field operators to the vacuum space, we can generate the Fock space in general and any $N$-particle Hilbert space in particular, it must be possible to represent any operator $\hat{\mathcal{O}_{1}}$ using the set of creation/annihilation operators. Here, we present the formal representation of a one-body operator using second quantization principles,
+
+\begin{equation}
+    \hat{\mathcal{O}_{1}} = \sum_{\lambda \mu \nu}\langle \mu | \lambda \rangle o_{\lambda}\langle \lambda | \nu \rangle \hat{c}^{\dagger}_{\mu} \hat{c}_{\nu} = \sum_{\mu \nu}\langle \mu|\hat{o}|\nu \rangle \hat{c}^{\dagger}_{\mu} \hat{c}_{\nu}
+\end{equation}
+
+Formally, the one-body operator, $\hat{\mathcal{O}_{1}}$, scatters a particle from a state $\nu$ into a state $\mu$ with probability amplitude $\braket{\mu|\hat{o}|\nu}$. \\
+
+Two-body operators $\hat{\mathcal{O}_{2}}$ are needed to describe \textit{pairwise interactions} between particles. Although pair-interaction potentials are straightforwardly included in classical many-body theories, their embedding into conventional many-body quantum mechanics is made awkward by particle indistinguishability. Here again, we present the formal representation of a two-body operator using second quantization principles without providing a detailed derivation for the same.
+
+\begin{equation}
+    \hat{\mathcal{O}_{2}} = \sum_{\lambda \lambda^{\prime} \mu \mu^{\prime}} \langle \mu, \mu^{\prime}|\mathcal{O}_{2}|\lambda, \lambda^{\prime}\rangle \hat{c}_{\mu^{\prime}}^{\dagger} \hat{c}_{\mu}^{\dagger} \hat{c}_{\lambda} \hat{c}_{\lambda^{\prime}}
+\end{equation}
+
+
+\section{Tight Binding Models}
+
+The beautiful simplicity embodied within the second quantisation formalism culminates with the ease with which it can be used to describe a many-particle system. Consider, for example, the free electron gas, with electrons occupying quantum states $\ket{k} = \ket{n_{k}}$, whose Hamiltonian can be expressed as
+
+\begin{equation}
+    \hat{H} = \sum_{k}\epsilon_{k}\hat{c}_{k}^{\dagger}\hat{c}_{k} = \sum_{k}\epsilon_{k}\hat{n}_{k}
+\end{equation}
+
+where $\epsilon_{k}$ represents the single-particle state of energy corresponding to the potential energy associated with orbital $\ket{k}$, and $\hat{n}_{k}$ represents the number operator. \\
+
+Now, we shall introduce an additional layer of complexity to the problem by accounting for the interaction between fermionic particles constituting the system.
+
+\begin{equation}
+    \hat{H} = \sum_{i}\epsilon_{i} \: \hat{c}_{i}^{\dagger} \hat{c}_{i} + \sum_{i \neq j}t_{ij} \: \hat{c}_{i}^{\dagger} \hat{c}_{j}
+\end{equation}
+
+where $t_{ij}$ is the tunnelling matrix element corresponding to the tunnelling/hopping of an electron from orbital $\ket{i}$ to orbital $\ket{j}$, such that $\langle i|\hat{H}|j \rangle = t_{ij}$. Additionally, since the Hamiltonian is intrinsically Hermitian, it places a restriction on the elements of the tunnelling matrix, namely, $t_{ij} = t_{ji}^{*}$. Such tight-binding models can be used as a compact, and highly intuitive description of many-particle systems in terms of creation (annihilation) field operators. \\
+
+Benzene provides an excellent toy model to illustrate the application of these principles to formulate its equivalent tight-binding Hamiltonian. The $p_{z}$ orbitals in benzene interact with only their nearest neighbors, which greatly simplifies the hopping terms associated with its $\pi$-bonded electronic network. 
+
+\begin{equation*}
+    \hat{H}_{\pi} = \epsilon \sum_{i=1}^{6} \hat{c}_{i}^{\dagger} \hat{c}_{i} + t \sum_{i=1}^{6} (\hat{c}_{i}^{\dagger} \hat{c}_{i+1} + \hat{c}_{i+1}^{\dagger} \hat{c}_{i})
+\end{equation*}
+
+\vspace{1cm}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.7]{benzene.png}
+\caption{\textit{The $p_{z}$ orbitals of the respective carbon atoms in benzene interact with their nearest neighbours, forming a delocalized network of $\pi$-electrons}}\label{benzene}
+\end{figure}

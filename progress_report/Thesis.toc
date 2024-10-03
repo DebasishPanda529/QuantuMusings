@@ -4,8 +4,13 @@
 \contentsline {subsection}{\numberline {1.0.1}Change of basis}{4}{subsection.9}%
 \contentsline {subsection}{\numberline {1.0.2}Fourier transform of field operators}{4}{subsection.11}%
 \contentsline {section}{\numberline {1.1}Representation of operators}{4}{section.14}%
+\contentsline {section}{\numberline {1.2}Tight Binding Models}{5}{section.17}%
+\contentsline {chapter}{\numberline {2}Bandstructure}{7}{chapter.21}%
+\contentsline {section}{\numberline {2.1}LCAO Theory}{7}{section.22}%
+\contentsline {section}{\numberline {2.2}Discretizing the Hamiltonian}{10}{section.27}%
+\contentsline {subsection}{\numberline {2.2.1}Toy Examples}{12}{subsection.30}%
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Fourier Transforming the Interacting Fermion Gas Hamiltonian}{5}{appendix.15}%
-\contentsline {chapter}{\numberline {B}Bloch's Theorem}{6}{appendix.16}%
+\contentsline {chapter}{\numberline {A}Fourier Transforming the Interacting Fermion Gas Hamiltonian}{14}{appendix.34}%
+\contentsline {chapter}{\numberline {B}Bloch's Theorem}{15}{appendix.35}%
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{9}{dummy.25}%
+\contentsline {chapter}{Bibliography}{18}{dummy.43}%

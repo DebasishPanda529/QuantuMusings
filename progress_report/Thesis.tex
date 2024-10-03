@@ -5,7 +5,7 @@
 % Set up the document
 \documentclass[a4paper, 11pt, oneside]{Thesis}  % Use the "Thesis" style, based on the ECS Thesis style by Steve Gunn
 \graphicspath{Figures/}  % Location of the graphics files (set up for graphics to be in PDF format)
-
+% \usepackage{graphicx}
 % Include any extra LaTeX packages required
 \usepackage[square, numbers, comma, sort&compress]{natbib}  % Use the "Natbib" style for the references in the Bibliography
 \usepackage{verbatim}  % Needed for the "comment" environment to make LaTeX comments
@@ -35,7 +35,6 @@
 %% ----------------------------------------------------------------
 
 \setstretch{1.3}  % It is better to have smaller font and larger line spacing than the other way round
-
 % Define the page headers using the FancyHdr package and set up for one-sided printing
 \fancyhead{}  % Clears all page headers and footers
 \rhead{\thepage}  % Sets the right side header to show the page number
@@ -95,15 +94,11 @@ Semiconductor-based devices have become the lifeblood of modern civilisation, po
 
 \input{Chapters/Chapter1} % Second Quantisation
 
-%\input{Chapters/Chapter2} % Electronic Bandstructure 
+\input{Chapters/Chapter2} % Bandstructure 
 
-%\input{Chapters/Chapter3} % Experimental Setup
+%\input{Chapters/Chapter3} % NEGF Formalism
 
-%\input{Chapters/Chapter4} % Experiment 1
-
-%\input{Chapters/Chapter5} % Experiment 2
-
-%\input{Chapters/Chapter6} % Results and Discussion
+%\input{Chapters/Chapter4} % Intro to Supercoductivity
 
 %\input{Chapters/Chapter7} % Conclusion
 
