@@ -1,24 +1,24 @@
 # Fdb version 4
-["bibtex Thesis"] 1727535754.92422 "Thesis.aux" "Thesis.bbl" "Thesis" 1727535889.66858 0
+["bibtex Thesis"] 1727535754.92422 "Thesis.aux" "Thesis.bbl" "Thesis" 1728106448.93562 0
   "./Bibliography.bib" 1715883570 2574 260b87ad64e41a337f5d2c189d43239f ""
-  "Thesis.aux" 1727535887 3762 9317ad959f9b2a605f3e03fc23655ac6 "pdflatex"
+  "Thesis.aux" 1728106447 3762 9317ad959f9b2a605f3e03fc23655ac6 "pdflatex"
   "c:/texlive/2023/texmf-dist/bibtex/bst/natbib/unsrtnat.bst" 1709737926 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
   (generated)
   "Thesis.bbl"
   "Thesis.blg"
   (rewritten before read)
-["pdflatex"] 1727535885.14861 "Thesis.tex" "Thesis.pdf" "Thesis" 1727535889.66984 0
+["pdflatex"] 1728106444.02518 "Thesis.tex" "Thesis.pdf" "Thesis" 1728106448.93647 0
   "1D_chain.png" 1727535530 21102 74e46a7dcf6903f4be2278d366c5fb95 ""
   "Appendices/AppendixA.tex" 1725052491 72 57b9d8bc65b1a9e5a0fabaca0ec42072 ""
   "Appendices/AppendixB.tex" 1727521601 4787 9bd230eac7e3a468c5af00353d2d3432 ""
   "Chapters/Chapter1.tex" 1725989523 13569 d4bc0f8f0d8ee3568669d178aa0665f7 ""
-  "Chapters/Chapter2.tex" 1727535880 12493 5cb36f6f483be532885f8394ae48a176 ""
-  "Thesis.aux" 1727535887 3762 9317ad959f9b2a605f3e03fc23655ac6 "pdflatex"
+  "Chapters/Chapter2.tex" 1727539990 12509 8543d2ceaefdc664bfb0521e634f8896 ""
+  "Thesis.aux" 1728106447 3762 9317ad959f9b2a605f3e03fc23655ac6 "pdflatex"
   "Thesis.bbl" 1727535755 275 de5ffaf5b665b622658d80bed97ba2a5 "bibtex Thesis"
   "Thesis.cls" 1725083488 12223 beb17c25649014063ebee8a798270df8 ""
-  "Thesis.out" 1727535887 2333 93847f86cec57b54a057f48c16643934 "pdflatex"
+  "Thesis.out" 1728106447 2333 93847f86cec57b54a057f48c16643934 "pdflatex"
   "Thesis.tex" 1727535883 5895 a472af30e47ae3967d13f8cc904da8b2 ""
-  "Thesis.toc" 1727535887 1067 85b0ec6d3995d49a3e98931c1c1dd248 "pdflatex"
+  "Thesis.toc" 1728106447 1067 85b0ec6d3995d49a3e98931c1c1dd248 "pdflatex"
   "benzene.png" 1710436682 59664 b89784b9f278b15f3cda2d28a65ed933 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1709732488 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1709734939 3524 cb3e574dea2d1052e39280babc910dc8 ""
