@@ -13,6 +13,9 @@
 \usepackage{braket}
 \usepackage{amsmath}
 \usepackage{physics}
+\usepackage{dsfont}
+\usepackage{subcaption}
+\usepackage{caption}
 
 \hypersetup{urlcolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
 
@@ -27,7 +30,7 @@
             {Debasish Panda}
             }
 \addresses  {\groupname\\\deptname\\\univname}  % Do not change this here, instead these must be set in the "Thesis.cls" file, please look through it instead
-\date       {\today}
+\date       {November 2024}
 \subject    {}
 \keywords   {}
 
@@ -96,11 +99,7 @@ Semiconductor-based devices have become the lifeblood of modern civilisation, po
 
 \input{Chapters/Chapter2} % Bandstructure 
 
-%\input{Chapters/Chapter3} % NEGF Formalism
-
-%\input{Chapters/Chapter4} % Intro to Supercoductivity
-
-%\input{Chapters/Chapter7} % Conclusion
+\input{Chapters/Chapter3} % Transport phenomena in SC hybrid structures
 
 %% ----------------------------------------------------------------
 % Now begin the Appendices, including them as separate files
@@ -109,20 +108,24 @@ Semiconductor-based devices have become the lifeblood of modern civilisation, po
 
 \appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
 
-\input{Appendices/AppendixA} % Fourier Transforming the Interacting Fermion Gas Hamiltonian
+\input{Appendices/AppendixA} \label{appendix:Bloch} % Bloch's Theorem
 
-\input{Appendices/AppendixB} % Bloch's Theorem
-
-%\input{Appendices/AppendixC} % Appendix Title
+\input{Appendices/AppendixB} \label{appendix:NEGF} % NEGF Formalism 
 
 \addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
 \backmatter
 
 %% ----------------------------------------------------------------
+% \label{Bibliography}
+% \lhead{\emph{Bibliography}}  % Change the left side page header to "Bibliography"
+% \bibliographystyle{unsrtnat}  % Use the "unsrtnat" BibTeX style for formatting the Bibliography
+% \bibliography{Bibliography}  % The references (bibliography) information are stored in the file named "Bibliography.bib"
+
 \label{Bibliography}
 \lhead{\emph{Bibliography}}  % Change the left side page header to "Bibliography"
-\bibliographystyle{unsrtnat}  % Use the "unsrtnat" BibTeX style for formatting the Bibliography
-\bibliography{Bibliography}  % The references (bibliography) information are stored in the file named "Bibliography.bib"
+\chapter*{Bibliography}  % Create an unnumbered chapter for the Bibliography
+%\addcontentsline{toc}{chapter}{Bibliography}  % Add Bibliography to the Table of Contents
+\input{Bibliography.tex}
 
 \end{document}  % The End
 %% ----------------------------------------------------------------

@@ -1,0 +1,280 @@
+\chapter{Transport Phenomena in Semiconductor-Superconductor Hybrid Structures}
+
+The non-equilibrium Green's function (NEGF) technique has emerged as a powerful tool or modelling nanoscale devices. Due to the versatility of the NEGF formalism, it can also be employed for devices that incorporate superconducting elements, which are of great academic interest, especially ones involving topological superconductivity and Majorana bound states. Refer to Appendix~\ref{appendix:NEGF} for a brief discussion of the NEGF formalism used throughout the text. \par 
+
+\section{The Bogoliubov deGennes Hamiltonian}
+
+The {\bf B}ardeen-{\bf C}ooper-{\bf S}chreiffer theory was presented in 1956 as a varaiational mean-field approach to phonon mediated inter-electron attractive interactions, leading to formation of Cooper pairs, below a critical temperature. As a superconductor is cooled below its critical temperature, the attractive interactions between electrons dominate over the repulsive Coulombic forces. In the presence of a net-attractive interaction, no matter how weak, the normal metal state becomes unstable. An attractive matrix element can arise by the coupling of electrons to another system of particles, or excitations in the solid. The BCS theory was the first microscopic description of the ground state of the superconductor, following which Bogoliubov formulated a concise framework in terms of quasi-particles to describe setups which feature superconductors coupled with normal systems. \par 
+
+A system of interacting electrons is described by the second quantization Hamiltonian, in terms of electron creation (annihilation) field operators $\Psi^{\dagger}(\textbf{r}\sigma)$ ($\Psi(\textbf{r}\sigma)$), at position $\textbf{r}$, with spin $\sigma$
+
+\begin{equation}
+ 	\begin{aligned}
+ 	H &= \underbrace{H_{0}}_{\text{single-particle Hamiltonian}} +\underbrace{H_{int}}_{\text{four-fermion interaction Hamiltonian}} \\
+        H_{0} &= \int d\textbf{r} \sum_{\sigma} \Psi^{\dagger}(\textbf{r}\sigma) \left[ \frac{(-i\hbar \nabla - e \textbf{A})^{2}}{2m^{*}} + U_{0}(\textbf{r}\sigma) - \mu \right] \Psi(\textbf{r}\sigma) \\
+        H_{int} &= -\frac{1}{2}V \int d\textbf{r} \sum_{\sigma, \sigma'} \Psi^{\dagger}(\textbf{r}\sigma) \Psi^{\dagger}(\textbf{r}\sigma') \Psi(\textbf{r}\sigma') \Psi(\textbf{r}\sigma)
+ 	\end{aligned}
+\end{equation}
+ 
+where $\textbf{A}$ is the magnetic vector potential, $m^{*}$ is the electron effective mass, $U_{0}$ is the single-particle potential energy and $V$ scales the interaction energy. Using the mean-field approximation, the four-fermion interaction potential can be expressed as an average potential acting on one particle at a time, which restricts the Hamiltonian to terms quadratic in field operators.
+
+\begin{equation*}
+	H_{mf} = \int d\textbf{r} \sum_{\sigma}\Psi^{\dagger}(\textbf{r}\sigma)[H_{0}+U_{\sigma}]\Psi(\textbf{r}\sigma) + \int d\textbf{r} \: [\Delta \: \Psi^{\dagger}_{\uparrow} \Psi^{\dagger}_{\downarrow} + \Delta^{*} \: \Psi_{\downarrow} \Psi_{\uparrow}]
+\end{equation*}
+
+The physical quantity thats sets apart superconductors from a normal insulator is the superconducting order parameter ($\Delta$), which couples electrons and holes of opposite spin and momentum. Apart from the conventional terms involving Coulomb interaction, which are of the form $\langle \psi_{i}^{\dagger}\psi_{j} \rangle$ (where $i$, $j$ are labelling indices for a combination of quantum-state and spin), there are anomalous terms of the form $\langle \psi_{i}^{\dagger}\psi_{j}^{\dagger} \rangle$ arising from the Cooper pairing process below the critical temperature. \par 
+
+As per the BCS theory, the indices can be transformed as $i \rightarrow k \uparrow$, and $j \rightarrow -k \downarrow$ for a continuum model. Assuming a metallic system, we end up with up-spin and down-spin bands filled up to the Fermi level designated by the electrochemical potential $\mu$. A ``hole'' transformation can be performed on the down-spin band, which flips the band and the down-spins are now respresented by unfilled particles or holes, similar to semiconductor physics. This is equivalent to a 2-component spinor transformation:
+
+\begin{equation}
+    \begin{bmatrix}
+        \Psi^{\dagger}_{\uparrow}(\textbf{r}) \\
+        \Psi^{\dagger}_{\downarrow}(\textbf{r})
+     \end{bmatrix} \rightarrow
+     \begin{bmatrix}
+        \Psi^{\dagger}_{\uparrow}(\textbf{r})\\
+        \Psi_{\downarrow}(\textbf{r})
+     \end{bmatrix} (\text{in real space}), \: 
+     \begin{bmatrix}
+        c^{\dagger}_{k \uparrow} \\
+        c^{\dagger}_{-k \downarrow}    
+     \end{bmatrix} \rightarrow
+     \begin{bmatrix}
+        c^{\dagger}_{k\uparrow} \\
+        c_{-k\downarrow}   
+     \end{bmatrix} (\text{in \textit{k}-space})
+\end{equation}
+
+The Hamiltonian of the continuum model is a $2 \times 2$ matrix in $k$-space, with two dispersion relations that get coupled due to the pairing term $\Delta_{k}$.
+
+\begin{equation*}
+    H_{k} = \begin{bmatrix}
+            (\epsilon_{k}-\mu) & \Delta_{k} \\
+            \Delta^{*}_{k} & -(\epsilon_{k}-\mu)
+    \end{bmatrix}
+\end{equation*}
+
+where, $\epsilon_{k} = \frac{\hbar^{2}k^{2}}{2m^{*}}$. \par 
+
+We can discretise the continuum model described above into a lattice model with a spacing of $a$. The on-site component of the Hamiltonian is given as 
+
+\begin{equation}
+    \alpha_{S} = \begin{bmatrix}
+          2t-\mu & \Delta_{0} \\
+          \Delta_{0}^{*} & -(2t-\mu)  
+    \end{bmatrix}
+\end{equation}
+
+where, $t = \frac{\hbar^{2}}{2m^{*}a^{2}}$ is the nearest-neighbour hopping parameter. The nearest-neighbour hopping matrix is given by 
+
+\begin{equation}
+    \beta = \begin{bmatrix}
+          -t & 0\\
+          0 & t  
+    \end{bmatrix}    
+\end{equation}
+
+The tight-binding Hamiltonian is subsequently written as
+
+\begin{equation}
+    H = \sum_{i}^{N}c^{\dagger}_{i}\alpha_{S}c^{i} + \sum_{i\neq j}^{N}c^{\dagger}_{i}\beta c_{j}    
+\end{equation}
+
+where $c^{\dagger}_{i}$ is the creation operator of the Nambu 2-component spinor ar site $i$, and $N$ is the number of sites in the device. The Hamiltonian of the superconducting sample can be written in the general form 
+
+\begin{equation}
+H = \begin{pmatrix}
+\alpha_S & \beta & 0 & \dots & 0 \\
+\beta^{\dagger} & \alpha_S & \beta & 0 & 0 \\
+0 & \beta^{\dagger} & \alpha_S & \beta & \vdots \\
+\vdots & 0 & \ddots & \ddots & \beta \\
+0 & \dots & \dots & \beta^{\dagger} & \alpha_S \\
+\end{pmatrix}   
+\end{equation}
+
+
+\section{The Isolated Kitaev Chain}
+
+The field of topological superconductivity began with a lattice model proposed by Kitaev in 2001. The Kitaev chain is a tight-binding chain of $N$ lattice sites, with one spinless fermionic orbital at each site and nearest-neighbour $p$-wave superconducting pairing. The $p$-wave nature of the superconductivity couples particles of equal spin, allowing a spinless treatment. The pairing is treated in the usual mean-field approach, yielding the Kitaev grandcanonical Hamiltonian
+
+\begin{equation}
+    \hat{H}_{\text{KC}} = -\mu \sum_{j=1}^{N}c^{\dagger}_{j}c_{j} - t\sum_{j=1}^{N-1}(c^{\dagger}_{j+1}c_{j}+c^{\dagger}_{j}c_{j+1})-\Delta \sum_{j=1}^{N-1}(c^{\dagger}_{j}c^{\dagger}_{j+1}+c_{j+1}c_{j})    
+\end{equation}
+
+in terms of the fermionic creation (annihilation) field operators $c^{\dagger}_{j}$ ($c_{j}$). The hopping amplitude $t$ and the superconducting pairing constant $\Delta$ are assumed to be real quantities in this case. The chemical potential $\mu$ represents the on-site energy and can be modulated by applying a gate voltage. \par 
+
+The Kiteav Hamiltonian has been of particular interest in the context of topological superconductivity, due to the possibility of hosting Majorana zero modes (MZMs) at its end in a particular parameter range. This can be seen by expressing the Hamiltonian in terms of so-called Majorana operators $\gamma^{A,B}$,
+
+\begin{equation}
+    \begin{pmatrix}
+        c_{j} \\
+        c^{\dagger}_{j}    
+    \end{pmatrix} = \frac{1}{\sqrt{2}}
+    \begin{pmatrix}
+        \gamma^{A}_{j} \\
+        \gamma^{B}_{j}    
+    \end{pmatrix}, \: (\gamma^{A,B})^{\dagger} = \gamma^{A,B},
+\end{equation}
+
+yielding the form
+
+\begin{equation} \label{eq:majorana}
+    \hat{H}_{\text{KC}} = -i\mu \sum_{j=1}^{N}\gamma^{A}_{j}\gamma^{B}_{j} + i(\Delta+t)\sum_{j=1}^{N-1}\gamma^{B}_{j}\gamma^{A}_{j+1}+i(\Delta-t)\sum_{j=1}^{N-1}\gamma^{A}_{j}\gamma^{B}_{j+1}  
+\end{equation}
+
+For the particular parameter settings $\Delta = \pm t$ and $\mu = 0$, which we call the Kitaev points, equation (\ref{eq:majorana}) leads to a `missing' fermionic quasiparticle $q_{\pm}$ at the extrema of the Kitaev chain:
+
+\begin{equation}
+    \begin{aligned}
+       q_{+} &= \frac{1}{\sqrt{2}}(\gamma^{A}_{1}+i\gamma^{B}_{N}) \quad [\Delta = t] \\
+       q_{-} &= \frac{1}{\sqrt{2}}(\gamma^{B}_{1}+i\gamma^{A}_{N}) \quad [\Delta = -t]          
+    \end{aligned}    
+\end{equation}
+
+This quasiparticle has zero energy and is composed of two isolated Majorana states localised at the ends of the chain. In general, the condition of hosting MZM does not restrict to the Kitaev points. \par
+
+\subsection{Bulk spectrum}
+
+The Kitaev Hamiltonian in the limit of $N \rightarrow \infty$ reads in $k$-space 
+
+\begin{equation*}
+    \hat{H}_{\text{KC}} = \frac{1}{2}\sum_{k}\hat{\psi}^{\dagger}_{k}H(k)\hat{\psi}_{k}, \quad \hat{\psi}^{\dagger}_{k} = \begin{pmatrix}
+       c_{k} & c_{-k}^{\dagger}     
+    \end{pmatrix}^{\text{T}}     
+\end{equation*}
+
+The $2 \times 2$ BdG matrix
+
+\begin{equation}
+    H(k) = 
+    \begin{bmatrix}
+       -\mu-2t\:\text{cos}(ka) & -2i\Delta \: \text{sin}(ka) \\
+       2i\Delta \: \text{sin}(ka) & \mu+2t\: \text{cos}(ka)         
+    \end{bmatrix}    
+\end{equation}
+
+can be diagonalized to yield the excitation spectrum
+
+\begin{equation}
+    E_{\pm}(k) = \pm \sqrt{4\Delta^{2}\:\text{sin}^{2}(ka)+[\mu+2t\: \text{cos}(ka)]^{2}}    
+\end{equation}
+
+\subsection{Energy spectrum of the finite Kitaev chain}
+
+Next, consider a finite Kitaev chain with $N$ sites and open boundary conditions, yielding $N$ allowed $k$ values. The BdG Hamiltonian of the open Kitaev chain can be expressed in the basis of standard fermionic operators $\hat{\psi} = (c_{1},\dots,c_{N},c_{1}^{\dagger},\dots,c_{N}^{\dagger})$,
+
+\begin{equation*}
+    \hat{H}_{\text{KC}} = \frac{1}{2}\hat{\psi}^{\dagger}H_{\text{KC}}\hat{\psi}     
+ \end{equation*}
+
+ where the BdG Hamiltonian $H_{\text{KC}}$ is
+
+ \begin{equation}
+     H_{\text{KC}} = \begin{bmatrix}
+          C & S \\
+          S^{\dagger} & -C   
+     \end{bmatrix}     
+ \end{equation} 
+
+ These matrices have the tridiagonal structure
+
+\begin{equation}
+    \begin{aligned}
+        C &= 
+        \begin{bmatrix}
+        -\mu & -t &  &  &  &  &  \\
+        -t & -\mu & -t &  &  &  &  \\
+         & -t & -\mu & -t &  &  &  \\
+         &  & \ddots & \ddots & \ddots &  &  \\
+         &  &  & -t & -\mu & -t &  \\
+         &  &  &  & -t & -\mu & -t \\
+         &  &  &  &  & -t & -\mu \\
+        \end{bmatrix}_{N \times N} \\
+        S &= 
+        \begin{bmatrix}
+        0 & \Delta &  &  &  &  &  \\
+        -\Delta & 0 & \Delta &  &  &  &  \\
+         & -\Delta & 0 & \Delta &  &  &  \\
+         &  & \ddots & \ddots & \ddots &  &  \\
+         &  &  & -\Delta & 0 & \Delta &  \\
+         &  &  &  & -\Delta & 0 & \Delta \\
+         &  &  &  &  & -\Delta & 0 \\              
+        \end{bmatrix}_{N \times N}      
+    \end{aligned} 
+\end{equation}
+
+the spectrum can be obtained by diagonalising $H_{\text{KC}}$ in real space. The fermionic operators associated with the Kitaev chain can be represented in several bases, each suited to facilitate some specific calculation. the default basis can be rearranged to a site-ordered particle-hole basis where $\hat{\psi} = (c_{1}^{\dagger},c_{1},\dots,c_{N}^{\dagger})$ with the BdG Hamiltonian matrix given by 
+
+\begin{equation}
+    H_{\text{KC}} = 
+    \begin{bmatrix}
+        \alpha & \beta &  &  &  &  &  \\
+        \beta^{\dagger} & \alpha & \beta &  &  &  &  \\
+        & \beta^{\dagger} & \alpha & \beta &  &  &  \\
+        &  & \ddots & \ddots & \ddots &  &  \\
+        &  &  & \beta^{\dagger} & \alpha & \beta &  \\
+        &  &  &  & \beta^{\dagger} & \alpha & \beta \\
+        &  &  &  &  & \beta^{\dagger} & \alpha \\        
+    \end{bmatrix}_{N \times N}   
+\end{equation}
+
+where 
+
+\begin{equation}
+    \begin{aligned}
+        \alpha &= 
+        \begin{bmatrix}
+            -\mu & 0 \\
+            0 & \mu            
+        \end{bmatrix}, \\
+        \beta &= 
+        \begin{bmatrix}
+            -t & \Delta \\
+            -\Delta & t             
+        \end{bmatrix}        
+    \end{aligned}    
+\end{equation}
+
+\clearpage
+
+\vspace{1cm}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.55]{KC.png}
+\caption{\textit{Eigenspectrum of the finite Kitaev chain as a function of $\mu/\Delta$ for N = 25, $\Delta/t = 1.0$. Note the zero energy modes observed within the topological regime, i.e., $|\mu| < 2|t|$.}}
+\end{figure}
+
+\vspace{1cm}
+
+We can also construct a ``disordered'' system with local inhomogeneity in the on-site potential. Such an inhomogeneity might occur due to Fermi energy mismatch as well as charge inhomogeneities in the system. For the disordered chain, the zero energy modes are observed both in the topological regime and in the trivial regime, which can make it difficult to identify genuine topological transitions in an experimental scenario.
+
+\clearpage
+
+\vspace*{2cm}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[scale=0.4]{KC_pristine_spectrum_21.png}
+\caption{\textit{Eigenspectrum for a pristine setup with $N = 21$ and $t/\Delta = 4.1$}}
+\vspace{1cm}
+\includegraphics[scale=0.4]{KC_disorder_spectrum_21.png}
+\caption{\textit{Eigenspectrum for a disordered setup with $N = 21$ and $t/\Delta = 4.1$}}
+\end{figure}    
+
+\clearpage
+
+\vspace*{2cm}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[scale=0.4]{KC_pristine_spectrum_100.png}
+\caption{\textit{Eigenspectrum for a pristine setup with $N = 100$ and $t/\Delta = 4.1$}}
+\vspace{1cm}
+\includegraphics[scale=0.4]{KC_disorder_spectrum_100.png}
+\caption{\textit{Eigenspectrum for a disordered setup with $N = 100$ and $t/\Delta = 4.1$}}
+\end{figure} 
+
+\clearpage
+
+\section{Voltage Driven Transport}

@@ -2,7 +2,7 @@
 
 
 \section{LCAO Theory}
-Before presenting the more elegant manner in which electronic bandstructure of many-particle systems can be determined via a combination of the principles behind second quantisation formalism and Bloch's theorem, I would like to present the generic (or more bluntly, $obsolete$) technique of analysing bandstructure using the principles of first quantisation. \\
+Before presenting the more elegant manner in which electronic bandstructure of many-particle systems can be determined via a combination of the principles behind second quantisation formalism and Bloch's theorem, I would like to present the generic (or more bluntly, $obsolete$) technique of analysing bandstructure using the principles of first quantisation. \par
 
 Consider a linear chain of identical hydrogenic atoms ($ns$ orbitals) with individual lattice points separated by a distance $a$. From the LCAO theory, the generalized wavefunction of the system can be expressed as a linear combination of orbitals at the lattice sites:
 \begin{equation*}
@@ -43,9 +43,7 @@ since the integral term in the RHS evaluates as null unless $m = n$. Hence, the 
     E_{k} = \alpha + 2\beta \text{cos}(ka)
 \end{equation}
 
-As pointed out earlier, for values of $k > \frac{\pi}{a}$, the $E-k$ diagram can be simply folded over into the region bounded by $-\frac{\pi}{a} < k < \frac{\pi}{a}$. This region is otherwise known as the first \textit{Brillouin zone}. \\
-
-\newpage
+As pointed out earlier, for values of $k > \frac{\pi}{a}$, the $E-k$ diagram can be simply folded over into the region bounded by $-\frac{\pi}{a} < k < \frac{\pi}{a}$. This region is otherwise known as the first \textit{Brillouin zone}. \par
 
 Next, we add an additional layer of complexity to the simple toy model by considering two atoms (not necessarily identical) per unit cell in a three-dimensional lattice. The trial wavefunction for the same can be expressed as
 \begin{equation*} 
@@ -53,12 +51,11 @@ Next, we add an additional layer of complexity to the simple toy model by consid
 \end{equation*}
 
 where $N$ is the number of unit cells (theoretically tending to a \textit{countable infinity}), and $d_{1}, d_{2}$ represent the displacement of atomic centres 1 and 2 respectively, w.r.t the centre of the unit cell under consideration, which itself is located at $\vec{R}_{n}$. $c_{1}(k), c_{2}(k)$ are the contributions of atomic orbitals 1 and 2, respectively, to the Bloch wavefunction. \\
-
 Denote $\alpha_{1} = \int_{\mathcal{R}} \phi_{1}^{\dagger}\mathcal{H}\phi_{1}\: d^{3}\vec{r}$, $\alpha_{2} = \int_{\mathcal{R}} \phi_{2}^{\dagger}\mathcal{H}\phi_{2}\: d^{3}\vec{r}$, and $\beta = \int_{\mathcal{R}} \phi_{i}^{\dagger}\mathcal{H}\phi_{j}\: d^{3}\vec{r} = \int_{\mathcal{R}} \phi_{j}^{\dagger}\mathcal{H}\phi_{i}\: d^{3}\vec{r}$ (for $|i-j| = 1$). Using the standard Fourier technique for eliminating the integrals yields the following set of equations
 \begin{equation*}
     \begin{aligned}
-        \alpha_{1} c_{1}(k) + \beta \sum_{n}e^{i\vec{k}\cdot \vec{d}_{nn}} c_{2}(k) &= E(k) c_{1}(k) \\
-        \alpha_{2} c_{2}(k) + \beta \sum_{n}e^{-i\vec{k}\cdot \vec{d}_{nn}} c_{1}(k) &= E(k) c_{2}(k)
+        \alpha_{1}\: c_{1}(k) + \beta \sum_{n}e^{i\vec{k}\cdot \vec{d}_{nn}} \:c_{2}(k) &= E(k) \: c_{1}(k) \\
+        \alpha_{2}\: c_{2}(k) + \beta \sum_{n}e^{-i\vec{k}\cdot \vec{d}_{nn}} \:c_{1}(k) &= E(k) \: c_{2}(k)
     \end{aligned}
 \end{equation*}
 
@@ -87,7 +84,7 @@ Under the limit that the atoms in the unit cell are identical, $\alpha_{1} = \al
 
 \section{Discretizing the Hamiltonian}
 
-While the detailed mathematical analysis outlined in the previous section is useful for gaining a physical intuition of the system, we need to generalize this process to basis sets other than the simple 1-D chain of atoms that we have been working on. In order to do so, we have to discretize the Schrödinger's equation such that we can formulate the Hamiltonian and the corresponding eigenvectors as matrices. This is also useful as a computational tool, since equations need to be discretized in order to run computational simulations. However, its utility is not merely limited as a computational tool- it will be shown that the idea of the wavefunction being a superposition of basis functions is essential to the structure of quantum mechanics in general. \\
+While the detailed mathematical analysis outlined in the previous section is useful for gaining a physical intuition of the system, we need to generalize this process to basis sets other than the simple 1-D chain of atoms that we have been working on. In order to do so, we have to discretize the Schrödinger's equation such that we can formulate the Hamiltonian and the corresponding eigenvectors as matrices. This is also useful as a computational tool, since equations need to be discretized in order to run computational simulations. However, its utility is not merely limited as a computational tool- it will be shown that the idea of the wavefunction being a superposition of basis functions is essential to the structure of quantum mechanics in general. \par
 
 Consider, for example, the classical problem of a perticle trapped in a box bounded by infinitely high walls. The Schrödinger's equation governing the system is given by
 \begin{equation*}
@@ -118,7 +115,7 @@ H =
 
 where $t_0 = \frac{\hbar^2}{2ma^{2}}$. The set of energy eigenvalues is given by $2t_{0}(1-cos(k_{n}a))$, such that $k_{n}=\frac{n\pi}{L}$. This result differs from the solution obtained analytically unless $k_{n}a = \frac{n\pi a}{L} << 1$, as shown in Fig. \ref{discrete_PIB}.
 
-\vspace{1cm}
+\clearpage
 
 \begin{figure}[h]
 \centering
@@ -128,11 +125,9 @@ where $t_0 = \frac{\hbar^2}{2ma^{2}}$. The set of energy eigenvalues is given by
 
 \vspace{1cm}
 
-The process of discretization did not yield an accurate analytical answer in this case since the setup itself is intrinsically continuous. However, for the problems we are interested in, this process yields fairly accurate solutions since the periodic nature of the lattice then facilitates its description as a discretized system. 
+The process of discretization did not yield an accurate analytical answer in this case since the setup itself is intrinsically continuous. However, for the problems we are interested in, this process yields fairly accurate solutions since the periodic nature of the lattice then facilitates its description as a discretized system. \par
 
-\clearpage
-
-\subsection{Toy Examples}
+\subsection{Toy examples}
 
 Consider a toy one-dimensional solid composed of $N$ atoms, separated by a distance $a$. Assuming one orbital per atom and periodic boundary condition, the $N\times N$ Hamiltonian matrix can be written as follows:
 
@@ -188,8 +183,183 @@ where $\nu \in Z$. Thus, we end up with $N$ discrete energy eigenvalues, all bou
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.6]{1D_chain.png}
-\caption{\textit{Bandstructure for a one-dimensional solid with $E_0 = 0$ and $E_{ss} = -1$.}}
+\caption{\textit{Bandstructure for a one-dimensional solid with $E_0 = 0$ and $E_{ss} = -1$}}
 \end{figure}
 
 \vspace{1cm}
 
+Consdier next a one-dimensional lattice with staggered hopping amplitudes, which is described by the well-known Su-Schreiffer-Heeger (SSH) model. The chain consists of $N$ unit cells, each unit cell hosting two sites, one on sublattice $A$, and one on sublattice $B$. The matrix representation of the discretized Hamiltonian of the system is given by
+
+\begin{equation}
+   H = \begin{matrix}
+     & \ket{1_A} & \ket{1_B} & \ket{2_A} & \ket{2_B} & \ket{3_A} & \ket{3_B} & \ldots\\
+    \ket{1_A} & E_0 & E_{ss} & 0 & 0 & 0 & 0 & \ldots \\
+    \ket{1_B} & E_{ss} & E_0 & E_{ss}^{'} & 0 & 0 & 0 & \ldots \\
+    \ket{2_A} & 0 & E_{ss}^{'} & E_0 & E_{ss} & 0 & 0 & \ldots \\
+    \ket{2_B} & 0 & 0 & E_{ss} & E_0 & E_{ss}^{'} & 0 & \ldots \\
+    \ket{3_A} & 0 & 0 & 0 & E_{ss}^{'} & E_0 & E_{ss} & \ldots \\
+    \ket{3_B} & 0 & 0 & 0 & 0 & E_{ss} & E_{0} & \ldots \\        
+    \end{matrix}
+\end{equation}
+
+The Hamiltonian can be expressed in a more compact form by condensing the elements of the matrix into ($2\times 2$) blocks as shown
+
+\begin{equation}
+[H] =
+\begin{matrix}
+     & \ket{1} & \ket{2} & \ket{3} & \ldots \\
+    \ket{1} & H_{11} & H_{12} & 0 & \ldots \\
+    \ket{2} & H_{21} & H_{22} & H_{23} & \ldots \\
+    \ket{3} & 0 & H_{32} & H_{33} & \ldots \\
+\end{matrix}   
+\end{equation}
+
+where
+
+\begin{equation*}
+H_{n,n} =
+\begin{bmatrix}
+    E_{0} & E_{ss} \\
+    E_{ss} & E_{0} \\
+\end{bmatrix}  \quad
+H_{n,n+1} =
+\begin{bmatrix}
+    0 & 0 \\
+    E_{ss}^{'} & 0 \\
+\end{bmatrix}  \quad
+H_{n,n-1} =
+\begin{bmatrix}
+    0 & E_{ss}^{'} \\
+    0 & 0 \\
+\end{bmatrix}  
+\end{equation*}
+
+The matrix equation ($[H]\psi = E\psi$) can be written in the form
+
+\begin{equation*}
+    E\phi_n = H_{n,n}\phi_n + H_{n,n-1}\phi_{n-1} + H_{n,n+1}\phi_{n+1}
+\end{equation*}
+
+where $\{\phi_{n}\}$ represents a ($2 \times 1$) column vector (this is in accordance with the fact that we have two basis states). Yet again, the ansatz for solving this set of equations is given by
+
+\begin{equation*}
+    \{\phi_n\} = \{\phi_0\}e^{ikna}
+\end{equation*}
+
+Substituting the ansatz, we have
+
+\begin{equation*}
+    E\{\phi_0\} = H_{nn}\{\phi_0\} + H_{n,n-1}e^{-ika}\{\phi_0\} + H_{n,n+1}e^{ika}\{\phi_0\}
+\end{equation*}
+
+that is
+
+\begin{equation*}
+E\{\phi_0\} =
+\begin{bmatrix}
+    E_0 & E_{ss}+E_{ss}^{'}e^{-ika} \\
+    E_{ss}+E_{ss}^{'}e^{ika} & E_0 \\
+\end{bmatrix} \{\phi_0\}
+\end{equation*}
+
+The energy eigenvalues of the system are given by
+
+\begin{equation}
+    E_{\pm} = E_0 \pm \sqrt{E_{ss}^{2}+E_{ss}^{'2}+2E_{ss}E_{ss}^{'}\text{cos}(ka)}
+\end{equation}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{ssh.png}
+\caption{\textit{Bandstructure for the dimerized one-dimensional lattice}}
+\end{figure}
+
+
+\subsection{General Result}
+
+We shall now generalize this procedure for calculating the bandstructure of any periodic lattice with an arbitrary number of basis functions per unit cell. Consider any particular unit cell $n$ connected to its neighboring unit cells $m$ by a Hamiltonian $[H_{nm}]$ of size $(b \times b)$, $b$ being the number of basis functions per unit cell. The overall matrix equation can be written as 
+
+\begin{equation*}
+     E\{\phi_{n}\} = [H_{nm}]\{\phi_{m}\}
+\end{equation*} 
+
+where $\{\phi_{m}\}$ is a ($b \times 1$) column vector denoting the wavefunction in unit cell $m$. The ansatz suggested for solving this is given by 
+
+\begin{equation*}
+    \{\phi_{m}\} = \{\phi_{0}\}\: e^{i\vec{k}\cdot\vec{d_{m}}}
+\end{equation*}
+
+Substituting the ansatz into the original matrix equation, we get
+
+\begin{equation*}
+    E\{\phi_{0}\} = [h(\vec{k})]\{\phi_{0}\} \quad \text{with} \quad [h(\vec{k})] = \sum_{m}[H_{nm}]\: e^{i\vec{k}\cdot(\vec{d_m}-\vec{d_n})}
+\end{equation*}
+
+The summation runs over all neighbouring unit cells (including itself) with which the unit cell $n$ has any overlap.
+
+
+\subsection{Graphene}
+
+Graphene consists of a single layer of a hexagonal lattice of carbon atoms. The unit cell has to be chosen carefully in this case since adjacent carbon atoms aren't in an identical environment in the graphene lattice -- one of the atoms sees two neighbours to its right and one neighbour to the left, while the situation is vice-versa for the adjacent atom. However, if we lump these two adjacent atoms into a unit cell as shown in Fig. \ref{graphene}, then the lattice of unit cells becomes periodic and each lattice site experiences an identical environment. 
+
+\vspace{0.6cm}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{graphene_lattice.png}
+\caption{\textit{Unit cell of two atoms in the graphene lattice}}
+\label{graphene}
+\end{figure}
+
+\vspace{0.6cm}
+
+It turns out that the 2$p_{z}$ orbital is sufficient to describe the bandstructure of graphene since the contribution of the 2$s$, 2$p_{x}$, and 2$p_{y}$ orbitals is insignificant in the vicinity of the Fermi energy. The resulting ($2 \times 2$) Hamiltonian is given by 
+
+\begin{align*}
+    [h(\vec{k})] = 
+    \begin{bmatrix}
+        0 & -t \\
+        -t & 0 
+    \end{bmatrix} + 
+    \begin{bmatrix}
+        0 & -t\:e^{i\vec{k}\cdot\vec{a_1}} \\ 
+        0 & 0
+    \end{bmatrix} + 
+    \begin{bmatrix}
+        0 & -t\:e^{i\vec{k}\cdot\vec{a_2}} \\
+        0 & 0
+    \end{bmatrix} +  
+    \begin{bmatrix}
+        0 & 0 \\
+        -t\:e^{-i\vec{k}\cdot\vec{a_1}} & 0
+    \end{bmatrix} + 
+    \begin{bmatrix}
+        0 & 0 \\
+        -t\:e^{-i\vec{k}\cdot\vec{a_2}} & 0 
+    \end{bmatrix}  
+\end{align*} 
+
+where $\vec{a_1} = \hat{x}a+\hat{y}b, \quad \vec{a_2} = \hat{x}a-\hat{y}b$ with $a = 3a_{0}/2, \quad b = \sqrt{3}a_{0}/2 $. On simplifying the expression, 
+
+\begin{equation}
+[h(\vec{k})] =
+    \begin{bmatrix}
+        0 & h_{0} \\
+        h_{0}^{*} & 0 
+    \end{bmatrix}
+\end{equation}
+
+where $h_{0} = -t(1+2e^{ik_{x}a}\text{cos}(k_{y}b))$. The energy eigenvalues are given by 
+
+\begin{equation}
+    E_{\pm} = \pm |h_{0}| = \pm t\sqrt{1 + 4\:\text{cos}(k_{x}a)\:\text{cos}(k_{y}b) + 4\:\text{cos}^{2}(k_{y}b)}
+\end{equation}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[scale=0.45]{graphene_bands.png}
+\caption{\textit{Bandstructure of graphene}}
+\vspace{12pt}
+\includegraphics[scale=0.5]{graphene_2D.png}
+\caption{\textit{Heatmaps for the conduction band and valence band of graphene, respectively. Note the violet (or yellow) nodes which represent 'valleys' in the bandstructure.}}
+\end{figure}
