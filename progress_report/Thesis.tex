@@ -14,10 +14,10 @@
 \usepackage{amsmath}
 \usepackage{physics}
 \usepackage{dsfont}
-\usepackage{subcaption}
-\usepackage{caption}
+\usepackage{xcolor}
 
-\hypersetup{urlcolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
+\definecolor{default}{HTML}{8D0016}
+\hypersetup{urlcolor=default, linkcolor=default, citecolor=default, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
 
 %% ----------------------------------------------------------------
 \begin{document}
@@ -123,8 +123,8 @@ Semiconductor-based devices have become the lifeblood of modern civilisation, po
 
 \label{Bibliography}
 \lhead{\emph{Bibliography}}  % Change the left side page header to "Bibliography"
-\chapter*{Bibliography}  % Create an unnumbered chapter for the Bibliography
-%\addcontentsline{toc}{chapter}{Bibliography}  % Add Bibliography to the Table of Contents
+% \chapter*{Bibliography}  % Create an unnumbered chapter for the Bibliography
+% \addcontentsline{toc}{chapter}{Bibliography}  % Add Bibliography to the Table of Contents
 \input{Bibliography.tex}
 
 \end{document}  % The End
